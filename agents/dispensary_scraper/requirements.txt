@@ -1,0 +1,31 @@
+# Core dependencies
+pydantic>=2.0.0
+pydantic-ai>=0.0.14
+pydantic-settings>=2.0.0
+python-dotenv>=1.0.0
+
+# Web scraping dependencies
+playwright>=1.40.0
+httpx>=0.24.0
+
+# Data processing dependencies
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Snowflake dependencies
+snowflake-connector-python>=3.0.0
+snowflake-sqlalchemy>=1.5.0
+
+# CLI and UI dependencies
+rich>=13.0.0
+click>=8.0.0
+
+# Testing dependencies
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+pytest-mock>=3.10.0
+pytest-cov>=4.0.0
+
+# Development dependencies
+mypy>=1.0.0
+ruff>=0.1.0

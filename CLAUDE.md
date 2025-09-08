@@ -1,8 +1,70 @@
-### 🔄 Project Awareness & Context
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## 🧮 Common Development Commands
+
+### Testing Commands
+```bash
+# Run all tests with verbose output
+python -m pytest tests/ -v
+
+# Run specific test files
+python -m pytest tests/test_agent.py -v
+
+# Run tests with coverage
+python -m pytest tests/ -v --cov
+
+# Run integration tests specifically
+python -m pytest -m integration
+```
+
+### Code Quality Commands  
+```bash
+# Format and fix code style issues
+ruff check --fix
+
+# Run type checking (if mypy is configured)
+mypy .
+
+# Format code with black
+black .
+```
+
+### Virtual Environment
+```bash
+# Always use the project virtual environment for Python commands
+source venv_linux/bin/activate  # Linux/Mac
+# or
+venv_linux\Scripts\activate     # Windows
+```
+
+## 🏗️ Project Architecture
+
+This is a **Context Engineering Template** focused on web scraping automation using Playwright and Python, with the following key architectural patterns:
+
+### Agent-Based Architecture
+- **Modular agent design** following the pattern: `agent.py`, `tools.py`, `prompts.py`
+- **Multi-agent systems** with subagents for specialized tasks (see `use-cases/agent-factory-with-subagents/`)
+- **Dependency injection** using Pydantic models for agent configuration
+
+### Web Scraping Framework Structure
+- **Playwright-based scraping** for dynamic content extraction
+- **Recursive data extraction** through parent/child category navigation  
+- **CSV output format** with structured naming: `{OUT_PREFIX}-{date_time}.csv`
+- **Snowflake integration** for data warehouse storage
+
+### Key Directories
+- `examples/` - Reference implementations and Jupyter notebooks for scraping logic
+- `use-cases/` - Specialized implementations (RAG agents, multi-agent systems)
+- `PRPs/` - Product Requirements Prompts for feature development
+- `.claude/commands/` - Custom Claude Code commands (`generate-prp.md`, `execute-prp.md`)
+
+## 🔄 Project Awareness & Context
 - **Always read `PLANNING.md`** at the start of a new conversation to understand the project's architecture, goals, style, and constraints.
-- **Check `TASK.md`** before starting a new task. If the task isn’t listed, add it with a brief description and today's date.
+- **Check `TASK.md`** before starting a new task. If the task isn't listed, add it with a brief description and today's date.
 - **Use consistent naming conventions, file structure, and architecture patterns** as described in `PLANNING.md`.
-- **Use venv_linux** (the virtual environment) whenever executing Python commands, including for unit tests.
+- **Use the project virtual environment** whenever executing Python commands, including for unit tests.
 
 ### 🧱 Code Structure & Modularity
 - **Never create a file longer than 500 lines of code.** If a file approaches this limit, refactor by splitting it into modules or helper files.

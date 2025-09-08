@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(/C:\\python-work\\claude-project\\Web-Scraping-Automation-Framework/**)",
+      "Read(/C:\\python-work\\claude-project\\Web-Scraping-Automation-Framework/**)",
+      "Read(/C:\\python-work\\claude-project\\Web-Scraping-Automation-Framework/**)",
+      "Read(/C:\\python-work\\claude-project\\Web-Scraping-Automation-Framework\\.claude/**)",
+      "Read(/C:\\python-work\\claude-project\\Web-Scraping-Automation-Framework\\.claude/**)",
+      "Read(/C:\\python-work\\claude-project\\Web-Scraping-Automation-Framework\\.claude\\commands/**)",
+      "Read(/C:\\python-work\\claude-project\\Web-Scraping-Automation-Framework\\.claude\\commands/**)",
+      "Read(/C:\\python-work\\claude-project\\Web-Scraping-Automation-Framework\\use-cases/**)",
+      "Read(/C:\\python-work\\claude-project\\Web-Scraping-Automation-Framework\\use-cases\\agent-factory-with-subagents\\agents\\rag_agent/**)",
+      "Read(/C:\\python-work\\claude-project\\Web-Scraping-Automation-Framework\\use-cases\\agent-factory-with-subagents\\examples\\testing_examples/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,0 +1,2 @@
+[console_scripts]
+dispensary-scraper = agents.dispensary_scraper.cli:cli
